@@ -1,0 +1,61 @@
+.whole{
+    text-align: center;
+}
+#picture{
+    position: relative;
+}
+#body{
+    text-align: center;
+    margin: 0 auto;
+}
+#top div{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 33.33%;
+    padding: 5px 0 5px;
+}
+#top{
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    top: 13%;
+    left: 15px;
+    right: 15px;
+    position: absolute;
+    box-shadow: 2px 2px 6px #0072e5;
+    padding: 10px;
+}
+#bottom div{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 33.33%;
+    padding: 15px 0 15px;
+}
+#bottom{
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow: 2px 2px 6px #0072e5;
+    padding: 10px;
+    margin: 105px 8px 0 8px;
+}
+#top div a,#bottom div a{
+    text-decoration: none;
+}
+#top div a p,#bottom div a p{
+    color: black;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+#top div a img, #bottom div a img{
+    width: 50px;
+    height: 50px;
+}
