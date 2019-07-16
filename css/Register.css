@@ -57,7 +57,7 @@
     padding-left: 0;
     margin-top: 20px;
 }
-#text label #text1,#text2{
+#text1,#text2{
     width: 90%;
     height: 50px;
     margin-top: 20px;
@@ -65,13 +65,32 @@
     background-color: rgb(246,247,251);
     border: 0;
 }
+
+#text111,#text222{
+    width: 90%;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgb(246,247,251);
+    border: 0;
+}
+
+#text11,#text22{
+    width: 90%;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgb(246,247,251);
+    border: 0;
+}
+
 ::-webkit-input-placeholder{
     font-family: "Microsoft YaHei";
     color: rgb(176,182,203);
     font-size: 16px;
     padding-left: 20px;
 }
-#text label #text3{
+#text3{
     width: 90%;
     height: 50px;
     margin-top: 20px;
@@ -80,7 +99,7 @@
     border: 0;
     position: relative;
 }
-#text label #b1{
+#b1{
     position: absolute;
     width: 130px;
     height: 40px;
@@ -91,7 +110,7 @@
     border-radius: 10px;
     border: 0;
 }
-#button label #b2{
+#b2,#b3,#b4{
     margin-top: 20px;
     width: 90%;
     height: 50px;
@@ -111,4 +130,8 @@
     font-size: 15px;
     margin-left: 65%;
     color: rgb(51,51,51);
+}
+
+.b{
+    margin-bottom: 15%;
 }
