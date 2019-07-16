@@ -1,6 +1,5 @@
 $(function () {
     $(document).on("click", "#b2", function () {
-        console.log(1111);
         let reg = /^1[3|4|5|7|8][0-9]{9}$/;
         let text1 = $.trim($("#text1").val());
         if (text1 === "") {
@@ -65,23 +64,20 @@ $(function () {
         }
     });
 
-    let countNum = 60;
-
-    function time(elm){
-        if(countNum === 0){
-            elm.attr('disabled',false);
-            elm.val('获取验证码');
-            countNum = 60;
-            return;
-        }else{
-            elm.attr('disabled',true);
-            elm.val('重新发送('+ countNum + 's)');
-            countNum--;
+    let countdown = 60;
+    function time(obj) {
+        if (countdown === 0) {
+            obj.removeAttribute("disabled");
+            obj.val = "获取验证码";
+            countdown = 60;
+        } else {
+            obj.setAttribute("disabled", true);
+            obj.val = "重新发送(" + countdown +")";
+            countdown --;
         }
-
-        setTimeout(function(){
-            time(elm)
-        },1000)
+        setTimeout(function () {
+            time(obj);
+        }, 1000)
     }
 
     $(document).on("click","#getCode",function () {
