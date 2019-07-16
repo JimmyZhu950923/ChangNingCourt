@@ -1,5 +1,6 @@
 $(function () {
-    $("#b2").on("click", function () {
+    $(document).on("click", "#b2", function () {
+        console.log(1111);
         let reg = /^1[3|4|5|7|8][0-9]{9}$/;
         let text1 = $.trim($("#text1").val());
         if (text1 === "") {
@@ -15,7 +16,31 @@ $(function () {
         t2.val(text2);
         let test3 = $.trim($("#text3").val());
         if (test3 === "" || test3 === "请输入验证码")return alert("请输入验证码!");
-        form1.submit();
+
+        // let method = $("#b2").attr("name");
+
+        $.ajax({
+            url: "http://218.242.129.151:9200/user/login",
+            data:JSON.stringify( {
+                jsons: {
+                    sjhm: text1,
+                    mm: text2,
+                },
+                method: "dsrptlogin"
+            }),
+            type: "POST",
+            contentType : "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                if (!data.error) {
+                    alert("登陆注册成功！");
+                }
+            },
+            error: function () {
+                alert("手机号或者密码错误！");
+                verify();
+            }
+        })
     });
 
     $("#b3").on("click", function () {
@@ -27,7 +52,6 @@ $(function () {
         if (text22 === "") {
             alert("请输入密码！");
         }
-        form2.submit();
     });
 
     $("#b4").on("click", function () {
@@ -39,41 +63,46 @@ $(function () {
         if (text222 === "") {
             alert("请输入密码！");
         }
-        form3.submit();
     });
 
-    let countdown = 60;
-    function settime(obj) {
-        if (countdown === 0) {
-            obj.removeAttribute("disabled");
-            obj.innerText = "获取验证码";
-            countdown = 60;
-        } else {
-            obj.setAttribute("disabled", true);
-            obj.innerText = "重新发送(" + countdown +")";
-            countdown --;
+    let countNum = 60;
+
+    function time(elm){
+        if(countNum === 0){
+            elm.attr('disabled',false);
+            elm.val('获取验证码');
+            countNum = 60;
+            return;
+        }else{
+            elm.attr('disabled',true);
+            elm.val('重新发送('+ countNum + 's)');
+            countNum--;
         }
-        setTimeout(function () {
-            settime(obj);
-        }, 1000)
+
+        setTimeout(function(){
+            time(elm)
+        },1000)
     }
 
-    $("#b1").on("click", function () {
+    $(document).on("click","#getCode",function () {
         let text1 = $("#text1").val();
         if (text1 === "") return alert("请输入您的手机号码！");
-        settime(this);
+        time(this);
         $.ajax({
-            url: "",
+            url: "http://218.242.129.151:9200/sendCode?sjhm=" + text1 + "&fydm=200000",
             async: false,
-            type: "post",
+            type: "GET",
+            contentType : "application/json; charset=utf-8",
+            dataType: "JSON",
             success: function (data) {
                 if (!data.error) {
                     alert("发送验证码成功！");
                 }
-            }, error: function (data) {
+            },
+            error: function () {
                 alert("发送失败！请检查输入的手机号码是否正确！");
             }
-        })
+        });
     });
 
     $(".li1").ready(function () {
@@ -118,5 +147,15 @@ $(function () {
         console.log(c);
         $('#content').html($('#dsr').html());
     });
+
+    function verify() {
+        let code1 = document.getElementById("text3").value;
+        let code2 = document.getElementById("text3").className;
+        if (code1 !== code2) {
+            alert("验证码错误，请重新输入！");
+            return false;
+        }
+        return true;
+    }
 });
 
