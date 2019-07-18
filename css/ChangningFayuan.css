@@ -59,3 +59,17 @@
     width: 50px;
     height: 50px;
 }
+#set{
+    position: absolute;
+    top: 10%;
+    left: 85%;
+    color: white;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+}
+#square{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+}

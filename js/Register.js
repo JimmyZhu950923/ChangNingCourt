@@ -1,4 +1,6 @@
 $(function () {
+    let d;
+    let token;
     $(document).on("click", "#b2", function () {
         let reg = /^1[3|4|5|7|8][0-9]{9}$/;
         let text1 = $.trim($("#text1").val());
@@ -13,36 +15,44 @@ $(function () {
             alert("请输入密码！");
         }
         t2.val(text2);
-        let test3 = $.trim($("#text3").val());
-        if (test3 === "" || test3 === "请输入验证码")return alert("请输入验证码!");
-
-        // let method = $("#b2").attr("name");
-
-        $.ajax({
-            url: "http://218.242.129.151:9200/user/login",
-            data:JSON.stringify( {
-                jsons: {
-                    sjhm: text1,
-                    mm: text2,
+        let text3 = $.trim($("#text3").val());
+        let code = a.data;
+        if (text3 === "") {
+            alert("请输入验证码！");
+        } else if (text3 !== code) {
+            alert("验证码错误，请重新输入！");
+            $("#text3").val("");
+            return false;
+        } else if (text3 === code) {
+            $.ajax({
+                url: "http://218.242.129.151:9200/user/login",
+                data:JSON.stringify( {
+                    jsons: {
+                        sjhm: text1,
+                        mm: text2,
+                    },
+                    method: "dsrptlogin"
+                }),
+                type: "POST",
+                contentType : "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    if (!data.error) {
+                        alert("登陆注册成功！");
+                        window.location.href = "./ChangningFayuan.html";
+                    }
+                    d = data;
+                    token = d.data.token;
+                    localStorage.setItem("yh_token", token);
                 },
-                method: "dsrptlogin"
-            }),
-            type: "POST",
-            contentType : "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (data) {
-                if (!data.error) {
-                    alert("登陆注册成功！");
+                error: function () {
+                    alert("手机号或者密码错误！");
                 }
-            },
-            error: function () {
-                alert("手机号或者密码错误！");
-                verify();
-            }
-        })
+            })
+        }
     });
 
-    $("#b3").on("click", function () {
+    $(document).on("click","#b3", function () {
         let text11 = $.trim($("#text11").val());
         if (text11 === "") {
             alert("请输入账号！");
@@ -51,9 +61,31 @@ $(function () {
         if (text22 === "") {
             alert("请输入密码！");
         }
+        $.ajax({
+            url: "http://218.242.129.151:9200/lower/login",
+            data: JSON.stringify({
+                "userName":text11,
+                "password":text22
+            }),
+            type: "POST",
+            contentType : "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                if (!data.error) {
+                    alert("登陆注册成功！");
+                    window.location.href = "./ChangningFayuan.html";
+                }
+                d = data;
+                token = d.data.token;
+                localStorage.setItem("ls_token", token);
+            },
+            error: function () {
+                alert("账号或者密码错误！");
+            }
+        })
     });
 
-    $("#b4").on("click", function () {
+    $(document).on("click", "#b4", function () {
         let text111 = $.trim($("#text111").val());
         if (text111 === "") {
             alert("请输入账号！");
@@ -62,17 +94,42 @@ $(function () {
         if (text222 === "") {
             alert("请输入密码！");
         }
+        $.ajax({
+            url: "http://218.242.129.151:9200/fyggz/login",
+            data: JSON.stringify({
+                "userName":text111,
+                "password":text222
+            }),
+            type: "POST",
+            contentType : "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                if (!data.error) {
+                    alert("登陆成功！");
+                    window.location.href = "./ChangningFayuan.html";
+                }
+                d = data;
+                token = d.data.token;
+                localStorage.setItem("fg_token", token);
+            },
+            error: function () {
+                alert("账号或者密码错误！");
+            }
+        })
     });
 
     let countdown = 60;
     function time(obj) {
         if (countdown === 0) {
             obj.removeAttribute("disabled");
-            obj.val = "获取验证码";
+            obj.value = "获取验证码";
             countdown = 60;
+            if (countdown === 60) {
+                return false;
+            }
         } else {
             obj.setAttribute("disabled", true);
-            obj.val = "重新发送(" + countdown +")";
+            obj.value = "重新发送(" + countdown +"s)";
             countdown --;
         }
         setTimeout(function () {
@@ -80,6 +137,7 @@ $(function () {
         }, 1000)
     }
 
+    let a;
     $(document).on("click","#getCode",function () {
         let text1 = $("#text1").val();
         if (text1 === "") return alert("请输入您的手机号码！");
@@ -94,6 +152,8 @@ $(function () {
                 if (!data.error) {
                     alert("发送验证码成功！");
                 }
+                console.log(data);
+                a = data;
             },
             error: function () {
                 alert("发送失败！请检查输入的手机号码是否正确！");
@@ -143,15 +203,5 @@ $(function () {
         console.log(c);
         $('#content').html($('#dsr').html());
     });
-
-    function verify() {
-        let code1 = document.getElementById("text3").value;
-        let code2 = document.getElementById("text3").className;
-        if (code1 !== code2) {
-            alert("验证码错误，请重新输入！");
-            return false;
-        }
-        return true;
-    }
 });
 

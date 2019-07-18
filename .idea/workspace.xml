@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="a3562323-b093-447a-bc3a-c8b349d893b2" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="a3562323-b093-447a-bc3a-c8b349d893b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChangningFayuan.html" beforeDir="false" afterPath="$PROJECT_DIR$/ChangningFayuan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ChangningFayuan.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ChangningFayuan.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ChangningFayuan.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ChangningFayuan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Register.js" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,11 +24,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Register.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-405">
               <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Register.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="654">
+              <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -34,8 +65,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Register.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="945">
               <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+=======
+            <state relative-caret-position="465">
+              <caret line="114" selection-start-line="114" selection-end-line="114" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -43,6 +79,27 @@
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/ChangningFayuan.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/ChangningFayuan.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> Stashed changes
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -55,6 +112,13 @@
     </option>
   </component>
   <component name="FindInProjectRecents">
+<<<<<<< Updated upstream
+=======
+    <findStrings>
+      <find>class=&quot;a&quot;</find>
+      <find>d</find>
+    </findStrings>
+>>>>>>> Stashed changes
     <dirStrings>
       <dir>$PROJECT_DIR$/home</dir>
     </dirStrings>
@@ -77,14 +141,26 @@
         <option value="$PROJECT_DIR$/css/ChangningFayuan.css" />
         <option value="$PROJECT_DIR$/ChangningFayuan.html" />
         <option value="$PROJECT_DIR$/css/Register.css" />
-        <option value="$PROJECT_DIR$/Register.html" />
         <option value="$PROJECT_DIR$/js/Register.js" />
+<<<<<<< Updated upstream
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="829" />
     <option name="width" value="770" />
+=======
+        <option value="$PROJECT_DIR$/css/ChangningFayuan.css" />
+        <option value="$PROJECT_DIR$/ChangningFayuan.html" />
+        <option value="$PROJECT_DIR$/Register.html" />
+        <option value="$PROJECT_DIR$/js/ChangningFayuan.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="857" />
+    <option name="width" value="746" />
+>>>>>>> Stashed changes
     <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -147,11 +223,21 @@
       <workItem from="1563178806662" duration="1798000" />
       <workItem from="1563237379281" duration="5309000" />
       <workItem from="1563244108786" duration="16177000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1563323795735" duration="20436000" />
+      <workItem from="1563411295962" duration="13108000" />
+      <workItem from="1563430699816" duration="1806000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="98946000" />
+=======
+    <option name="totallyTimeSpent" value="134737000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -212,6 +298,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test.html" />
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/ChangningFayuan.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -219,11 +306,25 @@
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/jquery-3.4.1/jquery-3.4.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="4282" column="16" lean-forward="true" selection-start-line="4282" selection-start-column="16" selection-end-line="4282" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/Register.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="35" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/ChangningFayuan.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="378">
           <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
@@ -240,23 +341,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-405">
           <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+=======
+        <state relative-caret-position="654">
+          <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/Register.css">
+    <entry file="file://$PROJECT_DIR$/css/ChangningFayuan.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        <state relative-caret-position="465">
+          <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Register.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/Register.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
+        <state relative-caret-position="540">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+=======
+        <state relative-caret-position="465">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Register.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="945">
           <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="303">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>

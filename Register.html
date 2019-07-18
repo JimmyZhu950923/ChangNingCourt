@@ -1,78 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" style="height: 100%; background-color: #f6f7fb;">
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta charset="UTF-8" name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
     <script src="./jquery-3.4.1/jquery-3.4.1.min.js"></script>
     <link href="./css/Register.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" language="JavaScript" src="./js/Register.js" charset="UTF-8"></script>
     <title>上海市长宁法院</title>
 </head>
 <body>
-    <div class="whole">
-        <div id="head">
-            <div id="picture">
-                <img src="./ChangningFayuan/register.png" alt="" width="100%">
-            </div>
+<div class="whole">
+    <div id="head">
+        <div id="picture">
+            <img src="./ChangningFayuan/register.png" alt="" width="100%">
         </div>
-        <div id="body">
-            <div id="menu">
-                <ul class="menu">
-                    <li id="li1" class="li1 active">律师</li>
-                    <li id="li2">法律服务工作者</li>
-                    <li id="li3">当事人</li>
-                </ul>
-            </div>
-            <hr width="90%" color="#F0F0F0"/>
-            <div id="content">
-
-            </div>
+    </div>
+    <div id="body">
+        <div id="menu">
+            <ul class="menu">
+                <li id="li1" class="li1 active">律师</li>
+                <li id="li2">法律服务工作者</li>
+                <li id="li3">当事人</li>
+            </ul>
+        </div>
+        <hr width="90%" color="#F0F0F0"/>
+        <div id="content">
+            
         </div>
     </div>
     <script type="text/html" id="dsr">
-<!--        <form name="form1" action="" method="post">-->
+        <label>
+            <input type="tel" id="text1" name="phoneNumber" maxlength="11" placeholder="请输入手机号码"
+                   regex="^[1][3,4,5,7,8][0-9]{9}$"/>
+            <input type="password" id="text2" name="password" placeholder="请输入密码"/>
+            <input type="number" id="text3" oninput="if(value.length>4)value=value.slice(0,4)" name="verificationCode"
+                   placeholder="手机验证码">
+            <input type="button" id="getCode" name="getCode" value="获取验证码"/>
+        </label>
+        <div class="button">
             <label>
-                <input type="tel" id="text1" name="phoneNumber" maxlength="11" placeholder="请输入手机号码" regex="^[1][3,4,5,7,8][0-9]{9}$" />
-                <input type="password" id="text2" name="password" placeholder="请输入密码" />
-                <input type="number" id="text3" oninput="if(value.length>4)value=value.slice(0,4)" name="verificationCode" placeholder="手机验证码">
-                <input type="button" id="getCode" name="getCode" value="获取验证码" />
+                <input type="button" id="b2" name="registerAndSignIn" value="注册并登陆"/>
             </label>
-            <div class="button">
-                <label>
-                    <input type="button" id="b2" name="registerAndSignIn" value="注册并登陆" />
-                </label>
-            </div>
-            <div id="forget">
-                <a href="#">
-                    忘记密码
-                </a>
-            </div>
-<!--        </form>-->
+        </div>
+        <div id="forget">
+            <a href="#">
+                忘记密码
+            </a>
+        </div>
     </script>
     <script type="text/html" id="ls">
-        <form name="form2" action="#" method="post">
+        <label>
+            <input type="text" id="text11" name="username" placeholder="请输入律师账号"/>
+            <input type="password" id="text22" name="password" placeholder="请输入密码"/>
+        </label>
+        <div class="button b">
             <label>
-                <input type="text" id="text11" name="username" placeholder="请输入律师账号"/>
-                <input type="password" id="text22" name="password" placeholder="请输入密码" />
+                <input type="submit" id="b3" name="registerAndSignIn" value="注册并登陆"/>
             </label>
-            <div class="button b">
-                <label>
-                    <input type="submit" id="b3" name="registerAndSignIn" value="注册并登陆" />
-                </label>
-            </div>
-        </form>
+        </div>
     </script>
     <script type="text/html" id="fg">
-        <form name="form3" action="#" method="post">
+        <label>
+            <input type="text" id="text111" name="username" placeholder="请输入法律工作者账号"/>
+            <input type="password" id="text222" name="password" placeholder="请输入密码"/>
+        </label>
+        <div class="button b">
             <label>
-                <input type="text" id="text111" name="username" placeholder="请输入法律工作者账号"/>
-                <input type="password" id="text222" name="password" placeholder="请输入密码" />
+                <input type="submit" id="b4" name="SignIn" value="登陆"/>
             </label>
-            <div class="button b">
-                <label>
-                    <input type="submit" id="b4" name="SignIn" value="登陆" />
-                </label>
-            </div>
-        </form>
+        </div>
     </script>
+</div>
 </body>
 </html>
