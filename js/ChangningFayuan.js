@@ -30,12 +30,7 @@ $(function () {
                         document.getElementsByTagName("a")[1].removeAttribute("href");
                         document.getElementsByTagName("a")[4].removeAttribute("href");
                         document.getElementsByTagName("a")[5].removeAttribute("href");
-                        layer.open({
-                            type: 1,
-                            shade: false,
-                            title: false,
-                            content:'\<\a href="./Register.html" style="text-decoration:none;font-size:18px;color:black;">&nbsp;&nbsp;&nbsp;请先登录注册！\<\/a>'
-                        });
+                        alert("请先点击登录注册！");
                         return false;
                     } else if (a.status === 1) {
                         console.log(data);
@@ -44,5 +39,23 @@ $(function () {
             })
         });
     });
+
+    $(document).on("click", "#register", function () {
+        if (localStorage.getItem("yh_token") !== null || localStorage.getItem("ls_token") !== null || localStorage.getItem("fg_token") !== null ) {
+            document.getElementById("register").disabled = true;
+            alert("已登录！");
+        } else {
+            window.location.href = "./Register.html";
+        }
+    })
+
+    $(document).on("click", "#set", function () {
+        if (localStorage.getItem("yh_token") === null || localStorage.getItem("ls_token") === null || localStorage.getItem("fg_token") === null ) {
+            document.getElementById("set").disabled = true;
+            alert("请先登录！");
+        } else {
+            window.location.href = "./Register.html";
+        }
+    })
 });
 

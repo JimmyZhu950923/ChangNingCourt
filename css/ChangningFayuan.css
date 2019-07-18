@@ -67,9 +67,11 @@
     font-weight: bold;
     font-family: "Microsoft YaHei";
 }
-#square{
+#register{
     position: absolute;
-    width: 100px;
-    height: 100px;
-    text-decoration: none;
+    top: 35%;
+    left: 80%;
+    color: white;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
 }
