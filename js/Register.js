@@ -5,22 +5,22 @@ $(function () {
         let reg = /^1[3|4|5|7|8][0-9]{9}$/;
         let text1 = $.trim($("#text1").val());
         if (text1 === "") {
-            alert("请输入手机号码！");
+            $.toast("请输入手机号码！", "text");
         } else if (!reg.test(text1)) {
-            alert("手机号码格式不正确！");
+            $.toast("手机号码格式不正确！", "text");
         }
         let t2 = $("#text2");
         let text2 = $.trim(t2.val());
         if (text2 === "") {
-            alert("请输入密码！");
+            $.toast("请输入密码！", "text");
         }
         t2.val(text2);
         let text3 = $.trim($("#text3").val());
         let code = a.data;
         if (text3 === "") {
-            alert("请输入验证码！");
+            $.toast("请输入验证码！", "text");
         } else if (text3 !== code) {
-            alert("验证码错误，请重新输入！");
+           $.toast("验证码错误，请重新输入！", "text");
             $("#text3").val("");
             return false;
         } else if (text3 === code) {
@@ -37,17 +37,15 @@ $(function () {
                 contentType : "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {
-                    if (!data.error) {
-                        alert("登陆注册成功！");
+                    if (data.status === 1) {
                         window.location.href = "./ChangningFayuan.html";
+                        d = data;
+                        token = d.data.token;
+                        localStorage.setItem("yh_token", token);
+                    } else if (data.status === 0){
+                       $.toast("登录失败,账号或密码不正确！", "text");
                     }
-                    d = data;
-                    token = d.data.token;
-                    localStorage.setItem("yh_token", token);
                 },
-                error: function () {
-                    alert("手机号或者密码错误！");
-                }
             })
         }
     });
@@ -71,17 +69,15 @@ $(function () {
             contentType : "application/json; charset=utf-8",
             dataType: "json",
             success: function (data) {
-                if (!data.error) {
-                    alert("登陆注册成功！");
+                if (data.status === 1) {
                     window.location.href = "./ChangningFayuan.html";
+                    d = data;
+                    token = d.data.token;
+                    localStorage.setItem("yh_token", token);
+                } else if (data.status === 0){
+                    $.toast("登录失败,账号或密码不正确！", "text");
                 }
-                d = data;
-                token = d.data.token;
-                localStorage.setItem("ls_token", token);
             },
-            error: function () {
-                alert("账号或者密码错误！");
-            }
         })
     });
 
@@ -104,17 +100,15 @@ $(function () {
             contentType : "application/json; charset=utf-8",
             dataType: "json",
             success: function (data) {
-                if (!data.error) {
-                    alert("登陆成功！");
+                if (data.status === 1) {
                     window.location.href = "./ChangningFayuan.html";
+                    d = data;
+                    token = d.data.token;
+                    localStorage.setItem("yh_token", token);
+                } else if (data.status === 0){
+                    $.toast("登录失败,账号或密码不正确！", "text");
                 }
-                d = data;
-                token = d.data.token;
-                localStorage.setItem("fg_token", token);
             },
-            error: function () {
-                alert("账号或者密码错误！");
-            }
         })
     });
 
@@ -150,13 +144,13 @@ $(function () {
             dataType: "JSON",
             success: function (data) {
                 if (!data.error) {
-                    alert("发送验证码成功！");
+                    $.toast("发送验证码成功！", "text");
                 }
                 console.log(data);
                 a = data;
             },
             error: function () {
-                alert("发送失败！请检查输入的手机号码是否正确！");
+                $.toast("发送失败！请检查输入的手机号码是否正确！", "text");
             }
         });
     });

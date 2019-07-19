@@ -59,18 +59,18 @@
     width: 50px;
     height: 50px;
 }
-#set{
+#register{
     position: absolute;
     top: 10%;
-    left: 85%;
+    left: 80%;
     color: white;
     font-weight: bold;
     font-family: "Microsoft YaHei";
 }
-#register{
+#signOut{
     position: absolute;
-    top: 35%;
-    left: 80%;
+    top: 10%;
+    left: 85%;
     color: white;
     font-weight: bold;
     font-family: "Microsoft YaHei";
