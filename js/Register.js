@@ -44,6 +44,8 @@ $(function () {
                         localStorage.setItem("yh_token", token);
                     } else if (data.status === 0){
                        $.toast("登录失败,账号或密码不正确！", "text");
+                       $("#text1").val("");
+                       $("#text2").val("");
                     }
                 },
             })
@@ -73,7 +75,7 @@ $(function () {
                     window.location.href = "./ChangningFayuan.html";
                     d = data;
                     token = d.data.token;
-                    localStorage.setItem("yh_token", token);
+                    localStorage.setItem("ls_token", token);
                 } else if (data.status === 0){
                     $.toast("登录失败,账号或密码不正确！", "text");
                 }
@@ -104,7 +106,7 @@ $(function () {
                     window.location.href = "./ChangningFayuan.html";
                     d = data;
                     token = d.data.token;
-                    localStorage.setItem("yh_token", token);
+                    localStorage.setItem("fg_token", token);
                 } else if (data.status === 0){
                     $.toast("登录失败,账号或密码不正确！", "text");
                 }

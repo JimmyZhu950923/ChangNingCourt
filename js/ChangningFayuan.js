@@ -25,10 +25,6 @@ $(function () {
                 console.log(data.status);
                 a = data;
                 if (a.status === 0) {
-                    document.getElementsByTagName("a")[0].removeAttribute("href");
-                    document.getElementsByTagName("a")[1].removeAttribute("href");
-                    document.getElementsByTagName("a")[4].removeAttribute("href");
-                    document.getElementsByTagName("a")[5].removeAttribute("href");
                     $(document).on("click", "#register", function () {
                         window.location.href = "./Register.html";
                     });
@@ -37,6 +33,22 @@ $(function () {
                     let register = $("#register");
                     register.html("退出");
                     register.attr("id", "signOut");
+                    if (yh_token !== null && ls_token === null && fg_token === null){
+                        $("#one").attr("href", "http://wxgzh.hshfy.sh.cn/yhfw/#/wsla/list");
+                        $("#two").attr("href", "http://wxgzh.hshfy.sh.cn/yhfw/#/ajlist");
+                        $("#three").attr("href", "http://wxgzh.hshfy.sh.cn/yhfw/#/wssd/list");
+                        $("#four").attr("href", "http://wxgzh.hshfy.sh.cn/yhfw/#/cldj/list");
+                    } else if (yh_token === null && ls_token !== null && fg_token === null) {
+                        $("#one").attr("href", "http://wxgzh.hshfy.sh.cn/lsfw/#/wsla/list");
+                        $("#two").attr("href", "http://wxgzh.hshfy.sh.cn/lsfw/#/ajlist");
+                        $("#three").attr("href", "http://wxgzh.hshfy.sh.cn/lsfw/#/wssd/list");
+                        $("#four").attr("href", "http://wxgzh.hshfy.sh.cn/yhfw/#/cldj/list");
+                    } else if (yh_token === null && ls_token === null && fg_token !== null) {
+                        $("#one").attr("href", "http://wxgzh.hshfy.sh.cn/fgfw/#/wsla/list");
+                        $("#two").attr("href", "http://wxgzh.hshfy.sh.cn/fgfw/#/ajlist");
+                        $("#three").attr("href", "http://wxgzh.hshfy.sh.cn/fgfw/#/wssd/list");
+                        $("#four").attr("href", "http://wxgzh.hshfy.sh.cn/fgfw/#/cldj/list");
+                    }
                 }
             },
         })
@@ -63,10 +75,6 @@ $(function () {
             success: function (data) {
                 a = data;
                 if (a.status === 0) {
-                    document.getElementsByTagName("a")[0].removeAttribute("href");
-                    document.getElementsByTagName("a")[1].removeAttribute("href");
-                    document.getElementsByTagName("a")[4].removeAttribute("href");
-                    document.getElementsByTagName("a")[5].removeAttribute("href");
                     $.toast("请先登录注册！", "text");
                     $(document).on("click", "#register", function () {
                         window.location.href = "./Register.html";
