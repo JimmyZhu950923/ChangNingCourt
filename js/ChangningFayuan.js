@@ -33,7 +33,7 @@ $(function () {
                     let register = $("#register");
                     register.html("退出");
                     register.attr("id", "signOut");
-                    if (yh_token !== null && ls_token === null && fg_token === null){
+                    if (yh_token !== null && ls_token === null && fg_token === null) {
                         $("#one").attr("href", "http://wxgzh.hshfy.sh.cn/yhfw/#/wsla/list");
                         $("#two").attr("href", "http://wxgzh.hshfy.sh.cn/yhfw/#/ajlist");
                         $("#three").attr("href", "http://wxgzh.hshfy.sh.cn/yhfw/#/wssd/list");
@@ -75,7 +75,9 @@ $(function () {
             success: function (data) {
                 a = data;
                 if (a.status === 0) {
-                    $.toast("请先登录注册！", "text");
+                    $.toast("请先登录注册！", "text", function () {
+                        window.location.href = "./Register.html";
+                    });
                     $(document).on("click", "#register", function () {
                         window.location.href = "./Register.html";
                     });
@@ -94,14 +96,38 @@ $(function () {
             title: "退出",
             text: "请确认退出！！！",
             onOK: function () {
-                $.toast("成功退出！","text");
+                $.closeModal();
+                $.toast("成功退出！", "text");
                 localStorage.removeItem("yh_token");
                 localStorage.removeItem("ls_token");
                 localStorage.removeItem("fg_token");
-                window.location.reload();
+                setTimeout(function () {
+                    window.location.reload();
+                }, 2100);
             },
             onCancel: function () {
+                $.closeModal();
             }
         });
+        // $.modal({
+        //     title: "退出",
+        //     text: "请确认退出？",
+        //     buttons: [
+        //         {text: "确认", onClick: function () {
+        //                 $.closeModal();
+        //                 $.toast("成功退出！", "text");
+        //                 localStorage.removeItem("yh_token");
+        //                 localStorage.removeItem("ls_token");
+        //                 localStorage.removeItem("fg_token");
+        //                 setTimeout(function () {
+        //                     window.location.reload();
+        //                 }, 2100);
+        //             }
+        //             },
+        //         {text: "取消",className: "default", onClick: function () {
+        //                 $.closeModal();
+        //             }}
+        //     ],
+        // });
     });
 });

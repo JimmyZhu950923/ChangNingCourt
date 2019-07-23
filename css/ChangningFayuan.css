@@ -1,14 +1,17 @@
-.whole{
+.whole {
     text-align: center;
 }
-#picture{
+
+#picture {
     position: relative;
 }
-#body{
+
+#body {
     text-align: center;
     margin: 0 auto;
 }
-#top div{
+
+#top div {
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -16,7 +19,8 @@
     flex: 33.33%;
     padding: 5px 0 5px;
 }
-#top{
+
+#top {
     border-radius: 5px;
     background-color: white;
     display: flex;
@@ -28,7 +32,8 @@
     box-shadow: 2px 2px 6px #0072e5;
     padding: 10px;
 }
-#bottom div{
+
+#bottom div {
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -36,7 +41,8 @@
     flex: 33.33%;
     padding: 15px 0 15px;
 }
-#bottom{
+
+#bottom {
     border-radius: 5px;
     background-color: white;
     display: flex;
@@ -44,38 +50,48 @@
     justify-content: space-around;
     box-shadow: 2px 2px 6px #0072e5;
     padding: 10px;
-    margin: 105px 8px 0 8px;
+    margin-top: 100px;
+    width: 87%;
+    margin-left: 15px;
 }
-#top div a,#bottom div a{
+
+#top div a, #bottom div a {
     text-decoration: none;
 }
-#top div a p,#bottom div a p{
+
+#top div a p, #bottom div a p {
     color: black;
     padding: 0;
     margin: 0;
     font-size: 13px;
 }
-#top div a img, #bottom div a img{
+
+#top div a img, #bottom div a img {
     width: 50px;
     height: 50px;
 }
-.a img{
+
+.a img {
     width: 50px;
     height: 50px;
 }
-#register{
+
+#register {
     position: absolute;
     top: 10%;
     left: 80%;
     color: white;
     font-weight: bold;
     font-family: "Microsoft YaHei";
+    cursor: pointer;
 }
-#signOut{
+
+#signOut {
     position: absolute;
     top: 10%;
     left: 85%;
     color: white;
     font-weight: bold;
     font-family: "Microsoft YaHei";
+    cursor: pointer;
 }
