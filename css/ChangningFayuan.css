@@ -95,3 +95,12 @@
     font-family: "Microsoft YaHei";
     cursor: pointer;
 }
+
+#one #two #three #four {
+    cursor: pointer;
+}
+
+button {
+    border: 0;
+    background-color: white;
+}

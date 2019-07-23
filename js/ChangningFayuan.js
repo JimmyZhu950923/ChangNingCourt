@@ -92,6 +92,43 @@ $(function () {
         })
     });
 
+    // $(".a").bind("click", function () {
+    //     let token;
+    //     if (yh_token !== null) {
+    //         token = yh_token;
+    //     } else if (ls_token !== null) {
+    //         token = ls_token;
+    //     } else if (fg_token !== null) {
+    //         token = fg_token;
+    //     }
+    //     $.ajax({
+    //         url: "http://218.242.129.151:9200/user/checkLogin",
+    //         data: JSON.stringify({
+    //             "token": token,
+    //         }),
+    //         async: false,
+    //         type: "POST",
+    //         contentType: "application/json; charset=utf-8",
+    //         dataType: "JSON",
+    //         success: function (data) {
+    //             a = data;
+    //             if (a.status === 0) {
+    //                 $.toast("请先登录注册！", "text", function () {
+    //                     window.location.href = "./Register.html";
+    //                 });
+    //                 $(document).on("click", "#register", function () {
+    //                     window.location.href = "./Register.html";
+    //                 });
+    //                 return false;
+    //             } else if (a.status === 1) {
+    //                 let register = $("#register");
+    //                 register.html("退出");
+    //                 register.attr("id", "signOut");
+    //             }
+    //         },
+    //     })
+    // });
+
     $(document).on("click", "#signOut", function () {
         $.confirm({
             title: "退出",
