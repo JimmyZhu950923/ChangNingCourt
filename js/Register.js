@@ -1,4 +1,5 @@
 $(function () {
+    $.toast.prototype.defaults.duration = 1000;
     let d;
     let token;
     $(document).on("click", "#b2", function () {

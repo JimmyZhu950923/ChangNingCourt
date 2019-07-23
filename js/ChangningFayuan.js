@@ -1,4 +1,5 @@
 $(function () {
+    $.toast.prototype.defaults.duration = 1000;
     let a;
     let yh_token = localStorage.getItem("yh_token");
     let ls_token = localStorage.getItem("ls_token");
@@ -103,31 +104,10 @@ $(function () {
                 localStorage.removeItem("fg_token");
                 setTimeout(function () {
                     window.location.reload();
-                }, 2100);
+                }, 1500);
             },
             onCancel: function () {
-                $.closeModal();
             }
         });
-        // $.modal({
-        //     title: "退出",
-        //     text: "请确认退出？",
-        //     buttons: [
-        //         {text: "确认", onClick: function () {
-        //                 $.closeModal();
-        //                 $.toast("成功退出！", "text");
-        //                 localStorage.removeItem("yh_token");
-        //                 localStorage.removeItem("ls_token");
-        //                 localStorage.removeItem("fg_token");
-        //                 setTimeout(function () {
-        //                     window.location.reload();
-        //                 }, 2100);
-        //             }
-        //             },
-        //         {text: "取消",className: "default", onClick: function () {
-        //                 $.closeModal();
-        //             }}
-        //     ],
-        // });
     });
 });

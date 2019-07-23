@@ -1,4 +1,5 @@
 $(function () {
+    $.toast.prototype.defaults.duration = 1000;
     let countdown = 60;
 
     function time(obj) {
@@ -71,7 +72,7 @@ $(function () {
         }
         let code = a.data;
         if (text2 !== text22) {
-            alert("两次输入的密码不相同，请重新输入！");
+            $.toast("两次输入的密码不相同，请重新输入！", "text");
             t2.val("");
             t22.val("");
         } else if (text3 !== code) {
@@ -93,8 +94,10 @@ $(function () {
                 dataType: "json",
                 success: function (data) {
                     if (!data.error) {
-                        $.toast("密码重置成功！")
-                        window.location.href = "./Register.html";
+                        $.toast("密码重置成功！");
+                        setTimeout(function () {
+                            window.location.href = "./Register.html";
+                        },1500);
                     }
                 },
             })
