@@ -96,7 +96,7 @@ $(function () {
                     if (!data.error) {
                         $.toast("密码重置成功！");
                         setTimeout(function () {
-                            window.location.href = "./Register.html";
+                            window.location.href = "./signIn.html";
                         },1500);
                     }
                 },
