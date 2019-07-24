@@ -43,12 +43,12 @@ $(function () {
                         $("#one").attr("href", "http://wxgzh.hshfy.sh.cn/lsfw/#/wsla/list");
                         $("#two").attr("href", "http://wxgzh.hshfy.sh.cn/lsfw/#/ajlist");
                         $("#three").attr("href", "http://wxgzh.hshfy.sh.cn/lsfw/#/wssd/list");
-                        $("#four").attr("href", "http://wxgzh.hshfy.sh.cn/yhfw/#/cldj/list");
+                        $("#four").attr("href", "http://wxgzh.hshfy.sh.cn/lsfw/#/cldj/list");
                     } else if (yh_token === null && ls_token === null && fg_token !== null) {
-                        $("#one").attr("href", "http://wxgzh.hshfy.sh.cn/fgfw/#/wsla/list");
-                        $("#two").attr("href", "http://wxgzh.hshfy.sh.cn/fgfw/#/ajlist");
-                        $("#three").attr("href", "http://wxgzh.hshfy.sh.cn/fgfw/#/wssd/list");
-                        $("#four").attr("href", "http://wxgzh.hshfy.sh.cn/fgfw/#/cldj/list");
+                        $("#one").attr("href", "http://wxgzh.hshfy.sh.cn/fg/#/wsla/list");
+                        $("#two").attr("href", "http://wxgzh.hshfy.sh.cn/fg/#/ajlist");
+                        $("#three").attr("href", "http://wxgzh.hshfy.sh.cn/fg/#/wssd/list");
+                        $("#four").attr("href", "http://wxgzh.hshfy.sh.cn/fg/#/cldj/list");
                     }
                 }
             },
