@@ -40,7 +40,7 @@ $(function () {
                 dataType: "json",
                 success: function (data) {
                     if (data.status === 1) {
-                        window.location.href = "./cnc.html";
+                        window.location.href = "./index.html";
                         d = data;
                         token = d.data.token;
                         localStorage.setItem("yh_token", token);
@@ -76,7 +76,7 @@ $(function () {
             dataType: "json",
             success: function (data) {
                 if (data.status === 1) {
-                    window.location.href = "./cnc.html";
+                    window.location.href = "./index.html";
                     d = data;
                     token = d.data.token;
                     localStorage.setItem("ls_token", token);
@@ -111,7 +111,7 @@ $(function () {
             dataType: "json",
             success: function (data) {
                 if (data.status === 1) {
-                    window.location.href = "./cnc.html";
+                    window.location.href = "./index.html";
                     d = data;
                     token = d.data.token;
                     localStorage.setItem("fg_token", token);
