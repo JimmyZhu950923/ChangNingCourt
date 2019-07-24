@@ -173,7 +173,7 @@ $(function () {
     $(".li1").ready(function () {
         let a = document.getElementById("li1").innerHTML;
         console.log(a);
-        $('#content').html($('#ls').html());
+        $('#content').html($('#dsr').html());
     });
 
     $("#li1").on("click", function () {
@@ -186,7 +186,7 @@ $(function () {
         let a = document.getElementById("li1").innerHTML;
         console.log(a);
 
-        $('#content').html($('#ls').html());
+        $('#content').html($('#dsr').html());
     });
 
     $("#li2").on("click", function () {
@@ -198,7 +198,7 @@ $(function () {
         $("#text3").val("");
         let b = document.getElementById("li2").innerHTML;
         console.log(b);
-        $('#content').html($('#fg').html());
+        $('#content').html($('#ls').html());
     });
 
     $("#li3").on("click", function () {
@@ -210,7 +210,7 @@ $(function () {
         $("#text3").val("");
         let c = document.getElementById("li3").innerHTML;
         console.log(c);
-        $('#content').html($('#dsr').html());
+        $('#content').html($('#fg').html());
     });
 });
 

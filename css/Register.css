@@ -22,7 +22,7 @@
     padding: 10px;
 }
 
-.menu #li1, #li3 {
+.menu #li1, #li2 {
     display: inline-block;
     width: 90px;
     height: 40px;
@@ -34,7 +34,7 @@
     border-radius: 10px;
 }
 
-.menu #li2 {
+.menu #li3 {
     display: inline-block;
     width: 135px;
     height: 40px;
