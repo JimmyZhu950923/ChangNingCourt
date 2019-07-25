@@ -24,9 +24,6 @@
 
 .menu #li1, #li2 {
     display: inline-block;
-    width: 90px;
-    height: 40px;
-    font-size: 16px;
     margin-right: -1px;
     text-align: center;
     line-height: 40px;
@@ -36,9 +33,6 @@
 
 .menu #li3 {
     display: inline-block;
-    width: 135px;
-    height: 40px;
-    font-size: 16px;
     margin-right: -1px;
     text-align: center;
     line-height: 40px;
@@ -125,10 +119,6 @@
 
 #getCode {
     position: absolute;
-    width: 130px;
-    height: 40px;
-    right: 10%;
-    margin-top: 7.5%;
     color: rgb(255, 255, 255);
     background: linear-gradient(to right, #3499f8, #1f79f2);
     border-radius: 10px;
@@ -151,11 +141,6 @@
     margin-left: 17px;
 }
 
-#forget {
-    margin-bottom: 15%;
-    cursor: pointer;
-}
-
 #forget a {
     text-decoration: none;
     font-family: "Microsoft YaHei";
@@ -168,4 +153,169 @@
 .b {
     margin-bottom: 15%;
     cursor: pointer;
+}
+
+/*iphone se以下*/
+@media (device-width: 320px) and (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .menu #li1, #li2 {
+        width: 60px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .menu #li3 {
+        width: 110px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    #forget {
+        margin-bottom: 8%;
+        cursor: pointer;
+    }
+
+    #getCode {
+        width: 100px;
+        height: 40px;
+        right: 10%;
+        margin-top: 8.5%;
+    }
+}
+
+@media (min-device-width : 375px) and (max-device-width : 667px) and (max-device-height: 800px) and (-webkit-min-device-pixel-ratio : 2){
+    .menu #li1, #li2 {
+        width: 80px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .menu #li3 {
+        width: 130px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #forget {
+        margin-bottom: 15%;
+        cursor: pointer;
+    }
+
+    #getCode {
+        width: 120px;
+        height: 40px;
+        right: 10%;
+        margin-top: 6.7%;
+    }
+}
+
+@media (device-width: 360px) and (device-height: 640px) and (-webkit-min-device-pixel-ratio: 2) {
+    .menu #li1, #li2 {
+        width: 80px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .menu #li3 {
+        width: 130px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #forget {
+        margin-bottom: 15%;
+        cursor: pointer;
+    }
+
+    #getCode {
+        width: 120px;
+        height: 40px;
+        right: 10%;
+        margin-top: 7.5%;
+    }
+}
+
+@media (min-device-width : 375px) and (max-device-width : 667px) and (min-device-height: 801px) and (-webkit-min-device-pixel-ratio : 2){
+    .menu #li1, #li2 {
+        width: 90px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .menu #li3 {
+        width: 130px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    #forget {
+        margin-bottom: 20%;
+        cursor: pointer;
+    }
+
+    #getCode {
+        width: 120px;
+        height: 40px;
+        right: 10%;
+        margin-top: 7%;
+    }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 835px) and (-webkit-min-device-pixel-ratio : 2){
+    .menu #li1, #li2 {
+        width: 90px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .menu #li3 {
+        width: 130px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    #forget {
+        margin-bottom: 20%;
+        cursor: pointer;
+    }
+
+    #getCode {
+        width: 120px;
+        height: 40px;
+        right: 10%;
+        margin-top: 3.3%;
+    }
+
+    #b2, #b3, #b4 {
+        margin-left: 37px;
+    }
+}
+
+@media (min-device-width: 1024px) and (min-device-height: 1350px) and (-webkit-min-device-pixel-ratio : 2){
+    .menu #li1, #li2 {
+        width: 90px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .menu #li3 {
+        width: 130px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    #forget {
+        margin-bottom: 20%;
+        cursor: pointer;
+    }
+
+    #getCode {
+        width: 120px;
+        height: 40px;
+        right: 10%;
+        margin-top: 2.5%;
+    }
+
+    #b2, #b3, #b4 {
+        margin-left: 48px;
+    }
 }

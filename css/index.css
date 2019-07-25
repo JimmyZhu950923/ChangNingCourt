@@ -25,13 +25,8 @@
     background-color: white;
     display: flex;
     justify-content: space-around;
-    top: 13%;
-    left: 15px;
-    right: 15px;
     position: absolute;
     box-shadow: 2px 2px 6px #0072e5;
-    padding: 10px;
-    width: 87%;
 }
 
 #bottom div {
@@ -40,7 +35,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     flex: 33.33%;
-    padding: 15px 0 15px;
 }
 
 #bottom {
@@ -50,10 +44,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     box-shadow: 2px 2px 6px #0072e5;
-    padding: 10px;
-    margin-top: 100px;
-    width: 87%;
-    margin-left: 4%;
 }
 
 #top div a, #bottom div a {
@@ -67,36 +57,6 @@
     font-size: 13px;
 }
 
-#top div a img, #bottom div a img {
-    width: 50px;
-    height: 50px;
-}
-
-.a img {
-    width: 50px;
-    height: 50px;
-}
-
-#register {
-    position: absolute;
-    top: 10%;
-    left: 80%;
-    color: white;
-    font-weight: bold;
-    font-family: "Microsoft YaHei";
-    cursor: pointer;
-}
-
-#signOut {
-    position: absolute;
-    top: 10%;
-    left: 85%;
-    color: white;
-    font-weight: bold;
-    font-family: "Microsoft YaHei";
-    cursor: pointer;
-}
-
 #one #two #three #four {
     cursor: pointer;
 }
@@ -105,4 +65,347 @@ button {
     border: 0;
     background-color: white;
     height: 76px;
+}
+
+/*iphone se以下*/
+@media (device-width: 320px) and (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    #top {
+        top: 11%;
+        left: 4%;
+        padding: 2.5%;
+        width: 87%;
+    }
+
+    #bottom {
+        padding: 10px;
+        margin-top: 90px;
+        width: 86%;
+        margin-left: 4%;
+    }
+
+    #bottom div {
+        padding: 5px 0 5px;
+    }
+
+    #register {
+        position: absolute;
+        top: 10%;
+        left: 80%;
+        color: white;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    #signOut {
+        position: absolute;
+        top: 10%;
+        left: 85%;
+        color: white;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    #top div a img, #bottom div a img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 2px;
+    }
+
+    .a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #top div a p, #bottom div a p {
+        font-size: 10px;
+    }
+}
+
+@media (device-width: 360px) and (device-height: 640px) and (-webkit-min-device-pixel-ratio: 2) {
+    #top {
+        top: 11%;
+        left: 4%;
+        padding: 2.5%;
+        width: 87%;
+    }
+
+    #bottom {
+        padding: 10px;
+        margin-top: 90px;
+        width: 86%;
+        margin-left: 4%;
+    }
+
+    #bottom div {
+        padding: 8px 0 8px;
+    }
+
+    #register {
+        position: absolute;
+        top: 10%;
+        left: 80%;
+        color: white;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    #signOut {
+        position: absolute;
+        top: 10%;
+        left: 85%;
+        color: white;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    #top div a img, #bottom div a img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 2px;
+    }
+
+    .a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #top div a p, #bottom div a p {
+        font-size: 10px;
+    }
+}
+
+@media (min-device-width : 375px) and (max-device-width : 667px) and (max-device-height: 800px) and (-webkit-min-device-pixel-ratio : 2){
+    #top {
+        top: 11%;
+        left: 4%;
+        padding: 2.5%;
+        width: 87%;
+    }
+
+    #bottom {
+        padding: 10px;
+        margin-top: 25%;
+        width: 87%;
+        margin-left: 4%;
+    }
+
+    #bottom div {
+        padding: 15px 0 15px;
+    }
+
+    #register {
+        position: absolute;
+        top: 10%;
+        left: 80%;
+        color: white;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    #signOut {
+        position: absolute;
+        top: 10%;
+        left: 85%;
+        color: white;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    #top div a img, #bottom div a img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 2px;
+    }
+
+    .a img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #top div a p, #bottom div a p {
+        font-size: 12px;
+    }
+}
+
+@media (min-device-width : 375px) and (max-device-width : 667px) and (min-device-height: 801px) and (-webkit-min-device-pixel-ratio : 2){
+    #top {
+        top: 11%;
+        left: 4%;
+        padding: 2.5%;
+        width: 87%;
+    }
+
+    #bottom {
+        padding: 10px;
+        margin-top: 30%;
+        width: 87%;
+        margin-left: 4%;
+    }
+
+    #bottom div {
+        padding: 20px 0 20px;
+    }
+
+    #register {
+        position: absolute;
+        top: 10%;
+        left: 80%;
+        color: white;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    #signOut {
+        position: absolute;
+        top: 10%;
+        left: 85%;
+        color: white;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    #top div a img, #bottom div a img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 2px;
+    }
+
+    .a img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #top div a p, #bottom div a p {
+        font-size: 14px;
+    }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 835px) and (-webkit-min-device-pixel-ratio : 2){
+    #top {
+        top: 15%;
+        left: 4%;
+        padding: 2.5%;
+        width: 87%;
+    }
+
+    #bottom {
+        padding: 10px;
+        margin-top: 15%;
+        width: 90%;
+        margin-left: 4%;
+    }
+
+    #bottom div {
+        padding: 30px 0 30px;
+    }
+
+    #register {
+        position: absolute;
+        top: 10%;
+        left: 83%;
+        color: white;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    #signOut {
+        position: absolute;
+        top: 10%;
+        left: 85%;
+        color: white;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    #top div a img, #bottom div a img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 2px;
+    }
+
+    .a img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #top div a p, #bottom div a p {
+        font-size: 18px;
+    }
+}
+
+@media (min-device-width: 1024px) and (min-device-height: 1350px) and (-webkit-min-device-pixel-ratio : 2){
+    #top {
+        top: 15%;
+        left: 4%;
+        padding: 2.5%;
+        width: 87%;
+    }
+
+    #bottom {
+        padding: 10px;
+        margin-top: 15%;
+        width: 90%;
+        margin-left: 4%;
+    }
+
+    #bottom div {
+        padding: 30px 0 30px;
+    }
+
+    #register {
+        position: absolute;
+        top: 10%;
+        left: 83%;
+        color: white;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    #signOut {
+        position: absolute;
+        top: 10%;
+        left: 85%;
+        color: white;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    #top div a img, #bottom div a img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 2px;
+    }
+
+    .a img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #top div a p, #bottom div a p {
+        font-size: 18px;
+    }
 }
