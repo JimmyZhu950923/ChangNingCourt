@@ -95,6 +95,14 @@
     text-align: center;
 }
 
+/*iphone se以下*/
+@media (device-width: 320px) and (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    #getCode {
+        width: 110px;
+        margin-top: 8.5%;
+    }
+}
+
 @media (min-device-width: 375px) and (max-device-width: 667px) and (max-device-height: 800px) and (-webkit-min-device-pixel-ratio: 2) {
     #getCode {
         margin-top: 6.5%;
